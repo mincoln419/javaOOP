@@ -1,26 +1,24 @@
 package com.mermer.oop;
 
-public class BubbleSort {
+import java.util.ArrayList;
+import java.util.List;
 
-    public int[] sort(int[] raw){
+public class BubbleSort <T extends Comparable<T>> implements Sort<T>{
 
-        boolean flag = true;
-        for(int i = 0 ; i < raw.length; i++){
-            flag = true;
-            for(int j = 0 ; j < raw.length-1; j++){
-                if(raw[j] > raw[j + 1]){
-                    flag = false;
-                    int tmp = raw[j];
-                    raw[j] = raw[j + 1];
-                    raw[j + 1] = tmp;
+    @Override
+    public List<T> sort(List<T> raw){
+
+        List<T> output = new ArrayList<>(raw);
+        for(int i = output.size() - 1 ; i > 0 ; i--){
+            for(int j = 0 ; j < i; j++){
+                if(output.get(j).compareTo(output.get(j + 1)) > 0){
+                    T tmp = output.get(j);
+                    output.set(j, output.get(j + 1));
+                    output.set(j + 1, tmp);
                 }
             }
-            if(flag){
-                System.out.println("i:" + i);
-                break;
-            }
         }
-        if(!flag)System.out.println("i:" + raw.length);
-        return raw;
+
+        return output;
     }
 }
