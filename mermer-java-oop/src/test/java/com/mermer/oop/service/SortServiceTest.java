@@ -1,5 +1,4 @@
 package com.mermer.oop.service;
-
 import com.mermer.oop.BubbleSort;
 import com.mermer.oop.JavaSort;
 import org.junit.jupiter.api.Assertions;
@@ -13,7 +12,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class SortServiceTest {
 
-    private SortService sortService = new SortService(new BubbleSort<>());
+    private final SortService sortService = new SortService(new BubbleSort<>());
 
     @Test
     void doSort() {
