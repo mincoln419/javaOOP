@@ -13,7 +13,7 @@ public class Main {
 
 
         public static void main(String[] args) throws IOException {
-            Sort bubbleSort = new BubbleSort();
+            Sort<String> bubbleSort = new BubbleSort<>();
 
             System.out.println("[result]" + bubbleSort.sort(Arrays.asList(args)));
         }
