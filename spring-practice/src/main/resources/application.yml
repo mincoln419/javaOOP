@@ -12,5 +12,8 @@ server:
 spring:
   main:
     web-application-type: servlet
+  cache:
+    type: redis
 
 mermer.height: 175
+

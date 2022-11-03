@@ -7,7 +7,6 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class Config {
 
-    @ConfigurationProperties("mermer")
     @Bean
     public MyProperties myProperties(){
         return new MyProperties();
