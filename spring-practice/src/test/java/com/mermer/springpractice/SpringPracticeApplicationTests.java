@@ -5,10 +5,10 @@ import org.springframework.boot.test.context.SpringBootTest;
 
 import java.io.IOException;
 
-@SpringBootTest
+
 class SpringPracticeApplicationTests {
 
-    @Test
+
     public void initTest(){
 
     }

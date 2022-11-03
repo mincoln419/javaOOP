@@ -1,6 +1,8 @@
 package com.mermer.oop.vo;
 
-public class Student {
+import java.io.Serializable;
+
+public class Student implements Serializable {
 
     private String name;
 

@@ -27,7 +27,6 @@ import javax.annotation.PostConstruct;
 		scanBasePackages = {"com.mermer"}
 
 )
-@EnableCaching
 public class SpringPracticeApplication {
 
 	final private Integer height;
